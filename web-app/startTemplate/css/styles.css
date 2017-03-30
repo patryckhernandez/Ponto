@@ -1,0 +1,583 @@
+.tab{
+    width: 100%;
+    margin-top: 5%;
+    font-size: 16px;
+}
+.tabes{
+    width: 100%;
+    margin-top: 5%;
+    font-size: 16px;
+}
+.tab table thead{
+        background-color: #2b2b2b;
+        text-align: center;
+        font-size: 18px;
+}
+.tabes table thead{
+    background: linear-gradient( #50f2ff, rgba(20, 152, 152, 0.9));
+    text-align: center;
+    font-size: 18px;
+}
+.tab tr a{
+    margin-left: 8%;
+}
+.tabes tr a{
+    margin-left: 8%;
+}
+.tab th {
+    color: white;
+    margin-left: 24%;
+}
+.tabes th {
+    color: white;
+    margin-left: 24%;
+}
+.trashi{
+    font-size: 20px;
+}
+.cols{
+    color: #000963;
+}
+.coli a{
+    color:white;
+}
+.boas{
+    position: fixed;
+    visibility: hidden;
+    background: #fbfff8;
+}
+.modalDialog{
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.closed {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.closed:hover { background: #00d9ff; }
+.rol{
+    width: 100%;
+}
+.rol h1{
+    color: #3a3a3a;
+}
+.inpt{
+    width: 25%;
+    border-radius: 4px;
+    padding-bottom: 0.5%;
+}
+
+.labeli{
+    color: #3a3a3a;
+    font-size: 17px;
+}
+.but{
+    width: 8%;
+    margin-top: 2%;
+}
+.butap{
+    margin-top: 10%;
+    margin-left: 30%;
+}
+.butap2{
+    float: right;
+    margin-top: -9%;
+    margin-right: 26%;
+}
+.butap3{
+    margin-top: 5%;
+    margin-left: 40%;
+    background: #217bf4;
+}
+.org {
+    width: 100%;
+    background-color: white;
+    border: solid 1px #cecece;
+    padding-bottom: 8%;
+    border-radius: 5px;
+    margin-top: 8%;
+    margin-bottom: 10%;
+}
+.orgtest{
+    width: 50%;
+    background-color: white;
+    border: solid 1px #cecece;
+    padding-bottom: 4%;
+    border-radius: 5px;
+    margin-top: 6%;
+    margin-left: 23%;
+    margin-bottom: 10%;
+}
+.orguser {
+    width: 60%;
+    background-color: white;
+    border: solid 1px #cecece;
+    padding-bottom: 8%;
+    border-radius: 5px;
+    margin-top: 12%;
+    margin-left: 20%;
+    margin-bottom: 10%;
+}
+.orgform2{
+    width: 50%;
+    background-color: white;
+    border: solid 1px #cecece;
+    padding-bottom: 8%;
+    border-radius: 5px;
+    margin-left: 25%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.headcad {
+    background: linear-gradient( #50f2ff, rgba(20, 152, 152, 0.9));
+    margin-top: -3.6%;
+    padding-bottom: 6px;
+}
+
+.headPont {
+    background: linear-gradient( #50f2ff, rgba(20, 152, 152, 0.9));
+    margin-top: -3%;
+    padding-bottom: 1%;
+}
+.divIn{
+    width: 48%;
+    background: #f5f5f5;
+    margin-top: -27%;
+    margin-right: 3%;
+    float: right;
+}
+.headPont2{
+    background: linear-gradient( #50f2ff, rgba(20, 152, 152, 0.9));
+    padding-bottom: 1%;
+    margin-top: -3.8%;
+    border-radius: 2px;
+}
+.headPont2 h1{
+    color: #f7f7f7;
+    font-size: 20px;
+    margin-left: 2%;
+    padding-top: 2%;
+}
+.headPont h1{
+    color: #f7f7f7;
+    font-size: 20px;
+    margin-left: 2%;
+    padding-top: 3%;
+}
+.headcaduser {
+    background: linear-gradient( #50f2ff, rgba(20, 152, 152, 0.9));
+    margin-top: -4%;
+    padding-bottom: 6px;
+}
+.headcaduser h1 {
+    color: white;
+    font-size: 25px;
+    padding-top: 1%;
+    padding-left: 2%;
+}
+.headcadcreate {
+    background: linear-gradient( #50f2ff, rgba(20, 152, 152, 0.9));
+    margin-top: -9%;
+    padding-bottom: 6px;
+}
+.headcadcreate h1{
+    color: white;
+    font-size: 25px;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+.headcad h1{
+    color: white;
+    font-size: 25px;
+    padding-top: 1%;
+    padding-left: 2%;
+}
+.labels {
+    font-size: 16px;
+    color: #a8a8a8;
+    margin-top: 4%;
+    padding-left: 12%;
+}
+.labelsn {
+    font-size: 16px;
+    color: #a8a8a8;
+    margin-top: 4%;
+    padding-left: 19%;
+}
+.labelsc {
+    font-size: 16px;
+    color: #a8a8a8;
+    margin-top: 4%;
+    padding-left: 19%;
+}
+.labelsf {
+    font-size: 16px;
+    color: #a8a8a8;
+    margin-top: 4%;
+    padding-left: 7%;
+}
+.labelsTel {
+    font-size: 16px;
+    color: #a8a8a8;
+    margin-top: 6%;
+    padding-left: 8%;
+}
+
+.inptt {
+    width: 55%;
+    margin-left: 20%;
+    margin-top: -6%;
+    padding-bottom: 0.5%;
+    border-radius: 4px;
+}
+.inpttedit{
+    width: 30%;
+    margin-left: 4%;
+    margin-top: -6%;
+    padding-bottom: 0.5%;
+    border-radius: 4px;
+}
+.edited{
+    margin-left: 8%;
+    margin-top: -1%;
+}
+.editcnpj{
+    width: 40%;
+    margin-top: 3%;
+    margin-left: 7%;
+}
+.editNome{
+    width: 55%;
+    margin-left: 2%;
+    margin-top: -6%;
+    padding-bottom: 0.5%;
+    border-radius: 4px;
+    font-size: 15px;
+}
+.editc{
+    width: 35%;
+    margin-left: 6%;
+    margin-top: -6%;
+    padding-bottom: 0.5%;
+    border-radius: 4px;
+}
+
+.editf{
+    width: 15%;
+    margin-left: 6%;
+    margin-top: -6%;
+    padding-bottom: 0.5%;
+    border-radius: 4px;
+}
+
+.editarea{
+    width: 60%;
+    padding-bottom: 20%;
+    border-radius: 4px;
+}
+.areacreate{
+    width: 72%;
+    padding-bottom: 20%;
+    margin-left: 17%;
+    margin-top: -4%;
+    border-radius: 4px;
+}
+.editel{
+    width: 35%;
+    margin-left: 45%;
+    margin-top: -4.6%;
+    padding-bottom: 0.5%;
+    border-radius: 4px;
+}
+.editLabeln{
+    font-size: 16px;
+    color: #a8a8a8;
+    margin-top: 6%;
+   margin-left: 4%;
+}
+
+.editLabelt{
+    font-size: 16px;
+    color: #a8a8a8;
+    margin-top: 6%;
+    margin-left: -16%;
+    margin-right: 4%;
+}
+.inptNome {
+    width: 45%;
+    margin-left: 20%;
+    margin-top: 0.2%;
+    padding-bottom: 0.5%;
+    border-radius: 4px;
+}
+.inpttcpf {
+    width: 20%;
+    margin-left: 20%;
+    margin-top: 0.2%;
+    padding-bottom: 0.5%;
+    border-radius: 4px;
+}
+
+.inpTel{
+    width: 50%;
+    margin-left: 28%;
+    margin-top: -3%;
+    padding-bottom: 0.5%;
+    border-radius: 4px;
+}
+
+.textarea{
+    width: 55%;
+    margin-left: 23%;
+    padding-bottom: 15%;
+    border-radius: 4px;
+}
+.telefone{
+    margin-left: 40%;
+    margin-top: -6%;
+}
+.in{
+margin-top: -3%;
+
+}
+.ind{
+    margin-left: 25%;
+    margin-top: -2%;
+}
+.iner{
+   margin-left: 23%;
+    margin-top: -3%;
+}
+.intel{
+    width: 70%;
+    margin-left: 7%;
+    margin-top: -4%;
+}
+.intelsec{
+    width: 70%;
+    margin-left: 20%;
+    margin-top: -5%;
+}
+
+.apre{
+    width: 100%;
+    padding-bottom: 3%;
+    background-color: #f6f5f8;
+    margin-top: 5%;
+    overflow: auto;
+}
+
+.boasV{
+    padding-left: 3%;
+    color: #a3a6a8;
+    margin-top: 4%;
+    font-size: 20px;
+}
+.status{
+    margin-left: 3%;
+    margin-top: 1%;
+}
+.select{
+    padding-bottom: 4px;
+    padding-top: 4px;
+    border-radius: 4px;
+}
+.dataHora{
+    font-size: 20px;
+    color: #a3a6a8;
+    margin-left: 6%;
+}
+.linhaHor{
+    border: 1px solid #c5c8ca;
+}
+.hea{
+ border: 1px solid #cecece;
+    margin-top: 10%;
+}
+.butt{
+    width:10%;
+    float: right;
+    margin-right: 45%;
+    margin-top: -15%;
+
+}
+.graf1{
+    width: 100%;
+    margin-top: 4%;
+    background-color: white;
+}
+.graf{
+    width: 36%;
+    margin-top: 3%;
+    background-color: white;
+    display: inline-block;
+}
+#chartdiv {
+    width: 100%;
+    height: 400px;
+    font-size: 11px;
+}
+#charting {
+    width: 100%;
+    height: 400px;
+    font-size: 11px;
+}
+.mens{
+    color: #dd0000;
+   font-size: 14px;
+    margin-left: 17%;
+    margin-top: 1%;
+}
+.minhaEmpresa{
+    width:80%;
+    background-color: white;
+    margin-left: 10%;
+    margin-top: 6%;
+    padding-bottom: 20%;
+    border: solid 1px #cecece;
+}
+.maped{
+    width:100%;
+    height:30%;
+}
+.jet{
+    width: 40%;
+    margin-left: 27%;
+    margin-top: 5%;
+    border: 1px solid #cfcfd8;
+}
+.int{
+    font-size: 25px;
+}
+.linha{
+
+    border: 0.5px solid #cfcfd8;
+}
+ol li{
+    list-style: none;
+}
+.lapis{
+    width: 6%;
+
+}
+
+.tdrest{
+    width: 30%;
+    padding-top: 10%;
+}
+.graphhead{
+    background: linear-gradient( #50f2ff, rgba(20, 152, 152, 0.9));
+    padding-top: 7%;
+    border-bottom:solid 2px #e9e5ed;
+}
+
+.graphhead h1{
+    color: rgba(108, 115, 110, 0.7);
+    margin-top: -5%;
+    margin-left: 4%;
+}
+.fgt{
+    width:100%;
+}
+
+.dashboard{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 1%;
+    margin-top: 4%;
+    color: #505150;
+}
+
+.copy-txtt {
+    background-color: #202020;
+    padding: 15px;
+    margin-top: -0.3%;
+    color: #7C7C7C;
+}
+
+.logotipe{
+    width:15%;
+    margin-left: 3%;
+}
+.divBusca{
+    width: 70%;
+    margin-top: 6%;
+    margin-left: 15%;
+}
+.warn{
+    color:red;
+    font-size: 20px;
+    margin-top: 8%;
+    margin-left: 15%;
+}
+.tert{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 10px;
+    margin-top: 5%;
+    border: groove red;
+    padding: 6px 25px 20px 25px;
+    background: #ffdace;
+    color: red;
+}
+.labelNm{
+    margin-left: 22%;
+    font-size: 20px;
+    color: #a8a8a8;
+}
+
+.btu{
+    margin-left: 2%;
+    border-radius:4px;
+    margin-top: 1%;
+}
+.inpttNome{
+    width: 35%;
+    color: #a8a8a8;
+    margin-left: 22%;
+    margin-top: 3%;
+    border-radius: 4px;
+}
