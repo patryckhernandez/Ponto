@@ -44,7 +44,7 @@
 				<g:each in="${funcionarioInstanceList}" status="i" var="funcionarioInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
-                        <td class="tdrest"><a href="#apag" class="btn btn-danger">
+                        <td class="tdrest"><a href="#apag" class="btn btn-danger"/>
 							<i class="trashi fa fa-trash" aria-hidden="true"></i>
 						</a><div id="apag" class="modalDialog">
 							<div>

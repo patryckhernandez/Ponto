@@ -101,12 +101,12 @@ class FuncionarioController {
             flash.message = "Desculpe, não encontramos nenhum funcionário com este nome!"
         }
     }
-
+    @Transactional
     def delete(Funcionario funcionarioInstance) {
         def us = Funcionario.findByCpf(funcionarioInstance.cpf)
 
         if(us) {
-            us.delete()
+            us.delete flush: true
             redirect(action: "index")
 
         }else{

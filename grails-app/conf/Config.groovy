@@ -125,6 +125,6 @@ grails.plugin.springsecurity.authority.className = 'ponto.Role'
 grails.plugin.springsecurity.requestMap.className = 'ponto.Requestmap'
 grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 grails.plugin.springsecurity.logout.postOnly = false
-
+grails.plugin.springsecurity.logout.afterLogoutUrl = '/login/auth'
 
 

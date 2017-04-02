@@ -137,8 +137,8 @@
     border: solid 1px #cecece;
     padding-bottom: 8%;
     border-radius: 5px;
-    margin-top: 8%;
-    margin-bottom: 10%;
+    margin-top: 2%;
+    margin-bottom: -30%;
 }
 .orgtest{
     width: 50%;
@@ -168,7 +168,7 @@
     border-radius: 5px;
     margin-left: 25%;
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: -30%;
 }
 
 .headcad {
@@ -408,6 +408,7 @@ margin-top: -3%;
     background-color: #f6f5f8;
     margin-top: 5%;
     overflow: auto;
+    margin-bottom: -30%;
 }
 
 .boasV{
@@ -442,6 +443,26 @@ margin-top: -3%;
     float: right;
     margin-right: 45%;
     margin-top: -15%;
+
+}
+.buttin{
+    width:10%;
+    float: right;
+    margin-right: 45%;
+    margin-top: 25%;
+}
+.butte{
+    width:12%;
+    float: right;
+    margin-right: 32%;
+    margin-top: -15%;
+
+}
+.butted{
+    width:12%;
+    float: right;
+    margin-right: 32%;
+    margin-top: -3%;
 
 }
 .graf1{

@@ -139,7 +139,7 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Bem Vindo ${name} <b
                         class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li>
@@ -153,7 +153,7 @@
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <g:link controller="logout"><i class="fa fa-fw fa-power-off"></i> Log Out</g:link>
+                        <g:link controller="logout"><i class="fa fa-fw fa-power-off"></i> Sair</g:link>
                     </li>
                 </ul>
             </li>
@@ -173,7 +173,8 @@
 
                         </li>
                         <li>
-                            <g:link controller="user" action="edit"><i class="fa fa-trash-o"></i>Usuário</g:link>
+                            <g:link controller="user" action="edit"><i
+                                    class="fa fa-child"></i> Usuário</g:link>
                         </li>
                     </ul>
                 </li>
@@ -182,7 +183,7 @@
                             class="fa fa-child"></i> Funcionários <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="demo2" class="collapse">
                         <li>
-                            <g:link controller="funcionario" action="index"><i class="fa fa-list"></i>  Listar Funcionáios</g:link>
+                            <g:link controller="funcionario" action="index"><i class="fa fa-list"></i>  Listar Funcionários</g:link>
                         </li>
                         <li>
                             <g:link controller="funcionario" action="create"><i class="fa fa-plus"></i>  Novo Funcionário</g:link>

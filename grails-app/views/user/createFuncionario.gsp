@@ -8,6 +8,7 @@
 <body>
 
 <div id="create-user" class="content scaffold-create" role="main">
+    <h1 class="dashboard"><i class="fa fa-building-o" aria-hidden="true"></i> Cadastro Usuário</h1>
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>

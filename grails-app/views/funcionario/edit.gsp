@@ -9,7 +9,7 @@
 	<body>
 
 		<div id="edit-funcionario" class="content scaffold-edit" role="main">
-
+			<h1 class="dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i> Editar Funcionário</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -26,9 +26,12 @@
 					<g:render template="form2"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+					<g:actionSubmit class="buttin btn btn-info" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
 				</fieldset>
 			</g:form>
+
+				<g:link class="butted btn btn-info" controller="user" action="createFuncionario" >Criar Usuário</g:link>
+
 		</div>
 	</body>
 </html>
