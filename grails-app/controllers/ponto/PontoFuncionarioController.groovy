@@ -35,7 +35,7 @@
                     ps.saida = hora
                     ps.data = data
                     ps.funcionario = ref
-                    ps.save(flush: true)
+                    ps.save flush: true
                     cont = false
 
                 } else {
@@ -44,7 +44,7 @@
                     ponto.data = data
                     ponto.funcionario = ref
                     cont = true
-                    ponto.save(flush: true)
+                    ponto.save flush: true
 
 
                 }
