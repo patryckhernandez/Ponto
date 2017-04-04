@@ -1,11 +1,8 @@
 <html>
 <head>
-	<meta name='layout' content=''/>
+	<meta name='layout' content='main'/>
 	<title><g:message code="springSecurity.login.title"/></title>
 	<style type='text/css' media='screen'>
-	.bod{
-		background: rgba(243, 245, 241, 0.95);
-	}
 	#login {
 		margin: 15px 0px;
 		padding: 0px;
@@ -13,14 +10,12 @@
 	}
 
 	#login .inner {
-		width: 440px;
-		padding-bottom: 20px;
+		width: 340px;
+		padding-bottom: 6px;
 		margin: 60px auto;
-		margin-top: 6%;
 		text-align: left;
 		border: 1px solid #aab;
-		overflow: auto;
-		background-color:white;
+		background-color: #f0f0fa;
 		-moz-box-shadow: 2px 2px 2px #eee;
 		-webkit-box-shadow: 2px 2px 2px #eee;
 		-khtml-box-shadow: 2px 2px 2px #eee;
@@ -29,7 +24,7 @@
 
 	#login .inner .fheader {
 		padding: 18px 26px 14px 26px;
-		background: linear-gradient( #50f2ff, rgba(20, 152, 152, 0.9));
+		background-color: #f7f7ff;
 		margin: 0px 0 14px 0;
 		color: #2e3741;
 		font-size: 18px;
@@ -54,7 +49,6 @@
 		float: left;
 		text-align: right;
 		margin-left: -105px;
-		margin-top: 5%;
 		width: 110px;
 		padding-top: 3px;
 		padding-right: 10px;
@@ -65,46 +59,32 @@
 	}
 
 	#login #submit {
-		margin-left: 18%;
-		margin-top: 8%;
+		margin-left: 15px;
 	}
 
 	#login #remember_me_holder label {
 		float: none;
 		margin-left: 0;
-		margin-top: -7%;
 		text-align: left;
 		width: 200px
 	}
 
 	#login .inner .login_message {
-		width: 80%;
-		margin-left: 10%;
-		border: groove red;
 		padding: 6px 25px 20px 25px;
-		background: #ffdace;
-		color: red;
+		color: #c33;
 	}
-	.msn{
-		color: red;
-	}
+
 	#login .inner .text_ {
-		width: 200px;
-		margin-top: 6%;
+		width: 120px;
 	}
 
 	#login .inner .chk {
 		height: 12px;
 	}
-	.esq{
-		margin-left: 32%;
-		margin-top: 17%;
-	}
 	</style>
 </head>
 
-<body class="bod">
-<g:render template="/layouts/topo"></g:render>
+<body>
 <div id='login'>
 	<div class='inner'>
 		<div class='fheader'><g:message code="springSecurity.login.header"/></div>
@@ -112,11 +92,11 @@
 		<g:if test='${flash.message}'>
 			<div class='login_message'>${flash.message}</div>
 		</g:if>
-		<p class="msn">* Insira login e senha</p>
+
 		<form action='${postUrl}' method='POST' id='loginForm' class='cssform' autocomplete='off'>
 			<p>
 				<label for='username'><g:message code="springSecurity.login.username.label"/>:</label>
-				<input type='text' style="width:200px; margin-top: 6%;" name='j_username' id='username'/>
+				<input type='text' class='text_' name='j_username' id='username'/>
 			</p>
 
 			<p>
@@ -130,21 +110,15 @@
 			</p>
 
 			<p>
-				<input type='submit' id="submit" class="btn-info" value='${message(code: "springSecurity.login.button")}'/>
+				<input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
 			</p>
-
 		</form>
-		<div class="esq">
-			<a href="#">esqueci minha senha</a>
-		</div>
 	</div>
-
 </div>
-<g:render template="/layouts/footere"></g:render>
 <script type='text/javascript'>
-	(function() {
-		document.forms['loginForm'].elements['j_username'].focus();
-	})();
+(function() {
+	document.forms['loginForm'].elements['j_username'].focus();
+})();
 </script>
 </body>
 </html>

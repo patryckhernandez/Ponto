@@ -24,6 +24,9 @@ class UserController {
     def createFuncionario(){
         respond new User(params)
     }
+    def createAdmin(){
+        respond new User(params)
+    }
     @Transactional
     def saveFuncionario(User userInstance){
         if (userInstance == null) {
@@ -64,6 +67,29 @@ class UserController {
         def roleUser = Role.findByAuthority('ROLE_ADMIN')
         UserRole.create(userInstance, roleUser, true)
         redirect(controller: 'login', action: 'auth')
+    }
+
+    @Transactional
+    def saveAdmin(User userInstance, Role papel){
+        if (userInstance == null) {
+            notFound()
+            return
+        }
+
+        if (userInstance.hasErrors()) {
+            respond userInstance.errors, view: 'create'
+            return
+        }
+
+        User us = springSecurityService.getCurrentUser()
+        def emp = us.empresa
+        userInstance.empresa = emp
+        userInstance.save flush: true
+
+        def roleUser = Role.findByAuthority('ROLE_ADMIN')
+        UserRole.create(userInstance, roleUser, true)
+        redirect(controller: 'dash', action: 'index')
+        flash.message = "Usuário criado com sucesso!"
     }
 
     def edit() {

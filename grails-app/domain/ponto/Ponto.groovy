@@ -6,7 +6,8 @@ class Ponto {
 
     static constraints = {
     entrada()
+
     }
 
-    static belongsTo = [funcionario:Funcionario, pontoSaida: PontoSaida]
+    static belongsTo = [funcionario:Funcionario]
 }

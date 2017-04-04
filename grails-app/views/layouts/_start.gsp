@@ -176,6 +176,10 @@
                             <g:link controller="user" action="edit"><i
                                     class="fa fa-child"></i> Usuário</g:link>
                         </li>
+                        <li>
+                            <g:link controller="user" action="createAdmin"> <i class="fa fa-user" aria-hidden="true"></i> Novo Administrador</g:link>
+
+                        </li>
                     </ul>
                 </li>
                 <li>

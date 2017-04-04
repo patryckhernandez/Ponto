@@ -127,4 +127,3 @@ grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.logout.afterLogoutUrl = '/login/auth'
 
-

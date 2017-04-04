@@ -135,9 +135,10 @@
 </script>
 </head>
 <body>
-    <div id="boas" class="boas">
-        <h1>Seja Bem vindo, ${name}</h1>
-    </div>
+
+        <g:if test='${flash.message}'>
+            <div class="usCreate"><i class="fa fa-check" aria-hidden="true"></i> ${flash.message}</div>
+        </g:if>
     <h1 class="dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</h1>
 
       <div class="graf1">
@@ -147,5 +148,6 @@
         <div id="chartdiv"></div>
       </div>
 <div id="map" class="maped"></div>
+
 </body>
 </html>

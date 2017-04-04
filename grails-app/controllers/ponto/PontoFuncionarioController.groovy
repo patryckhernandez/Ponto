@@ -1,5 +1,7 @@
         package ponto
 
+        import grails.transaction.Transactional
+
         import java.sql.Date
         import java.text.DateFormat
         import java.text.SimpleDateFormat
@@ -12,7 +14,7 @@
                 def name = nome.username
                 render(view: 'baterPonto',model: [name:name])
             }
-
+            @Transactional
             def batePonto(){
 
                 DateFormat date = new SimpleDateFormat("dd/MM/yyyy")
@@ -35,8 +37,9 @@
                     ps.saida = hora
                     ps.data = data
                     ps.funcionario = ref
-                    ps.save flush: true
+                    ps.ponto = pt
                     cont = false
+                    ps.save(flush:true, failOnError:true)
 
                 } else {
                     Ponto ponto = new Ponto()
@@ -44,7 +47,7 @@
                     ponto.data = data
                     ponto.funcionario = ref
                     cont = true
-                    ponto.save flush: true
+                    ponto.save(flush:true, failOnError: true)
 
 
                 }

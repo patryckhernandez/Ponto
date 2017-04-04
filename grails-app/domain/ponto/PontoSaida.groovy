@@ -11,6 +11,7 @@ class PontoSaida {
 
     static constraints = {
         saida()
+        ponto(nullable: false)
     }
 
     static belongsTo = [funcionario:Funcionario]
