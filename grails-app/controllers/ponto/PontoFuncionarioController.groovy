@@ -30,12 +30,13 @@
                 def hora = date2.format(stringHora)
 
                     def pt = Ponto.executeQuery("from Ponto where id = (select max(id) from Ponto where funcionario = :ref) and funcionario = :ref",[ref:ref])
-                    def ptId = Ponto.findByFuncionario(ref)
-                if(pt != null) {
+
+                if(pt.size() != 0) {
 
                     def ptSai = PontoSaida.find("from PontoSaida ps where ps.ponto = :point", [point:pt])
 
                     if (pt != null && pt.data.contains(data) && ptSai == null) {
+                        def ptId = Ponto.find("from Ponto where id = (select max(id) from Ponto where funcionario = :ref)",[ref:ref])
 
                             PontoSaida ps = new PontoSaida()
                             ps.saida = hora
