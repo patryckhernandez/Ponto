@@ -8,7 +8,6 @@
 
         class PontoFuncionarioController {
             def springSecurityService
-            def cont = true
             def index() {
                 User nome = springSecurityService.getCurrentUser()
                 def name = nome.username
@@ -30,26 +29,36 @@
                 def stringHora = Calendar.getInstance().getTime()
                 def hora = date2.format(stringHora)
 
-                def pt = Ponto.findByFuncionario(ref)
+                def pt = Ponto.executeQuery("from Ponto where (select max(id) from Ponto)and funcionario = :refer", [refer:ref])
+                def pont = Ponto.find("from Ponto where id = (select max(id) from Ponto)")
 
-                if (pt != null && pt.data == data && cont == true) {
-                    PontoSaida ps = new PontoSaida()
-                    ps.saida = hora
-                    ps.data = data
-                    ps.funcionario = ref
-                    ps.ponto = pt
-                    cont = false
-                    ps.save(flush:true, failOnError:true)
+                if(pont != null) {
 
-                } else {
+                    def ptSai = PontoSaida.find("from PontoSaida ps where ps.ponto = :point", [point:pont])
+
+                    if (pt != null && pt.data == data && ptSai == null) {
+                        PontoSaida ps = new PontoSaida()
+                        ps.saida = hora
+                        ps.data = data
+                        ps.funcionario = ref
+                        ps.ponto = pont
+                        ps.save(flush: true, failOnError: true)
+
+                    } else {
+                        Ponto ponto = new Ponto()
+                        ponto.entrada = hora
+                        ponto.data = data
+                        ponto.funcionario = ref
+                        ponto.save(flush: true, failOnError: true)
+
+
+                    }
+                }else{
                     Ponto ponto = new Ponto()
                     ponto.entrada = hora
                     ponto.data = data
                     ponto.funcionario = ref
-                    cont = true
-                    ponto.save(flush:true, failOnError: true)
-
-
+                    ponto.save(flush: true, failOnError: true)
                 }
 
                 render (view: 'baterPonto', model: [data:data, name:name, hora: hora])
