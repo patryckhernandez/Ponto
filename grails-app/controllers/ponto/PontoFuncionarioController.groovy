@@ -29,20 +29,20 @@
                 def stringHora = Calendar.getInstance().getTime()
                 def hora = date2.format(stringHora)
 
-                def pt = Ponto.executeQuery("from Ponto where (select max(id) from Ponto)and funcionario = :refer", [refer:ref])
-                def pont = Ponto.find("from Ponto where id = (select max(id) from Ponto)")
+                    def pt = Ponto.executeQuery("from Ponto where id = (select max(id) from Ponto where funcionario = :ref) and funcionario = :ref",[ref:ref])
+                    def ptId = Ponto.findByFuncionario(ref)
+                if(pt != null) {
 
-                if(pont != null) {
+                    def ptSai = PontoSaida.find("from PontoSaida ps where ps.ponto = :point", [point:pt])
 
-                    def ptSai = PontoSaida.find("from PontoSaida ps where ps.ponto = :point", [point:pont])
+                    if (pt != null && pt.data.contains(data) && ptSai == null) {
 
-                    if (pt != null && pt.data == data && ptSai == null) {
-                        PontoSaida ps = new PontoSaida()
-                        ps.saida = hora
-                        ps.data = data
-                        ps.funcionario = ref
-                        ps.ponto = pont
-                        ps.save(flush: true, failOnError: true)
+                            PontoSaida ps = new PontoSaida()
+                            ps.saida = hora
+                            ps.data = data
+                            ps.funcionario = ref
+                            ps.ponto = ptId
+                            ps.save(flush: true, failOnError: true)
 
                     } else {
                         Ponto ponto = new Ponto()
