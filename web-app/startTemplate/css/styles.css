@@ -126,7 +126,7 @@
 }
 .butap2{
     float: right;
-    margin-top: -9%;
+    margin-top: -9.5%;
     margin-right: 26%;
 }
 .butap3{
@@ -357,13 +357,19 @@
     border-radius: 4px;
 }
 .inpttcpf {
+    width: 40%;
+    margin-left: 22%;
+    margin-top: 6%;
+    padding-bottom: 0.5%;
+    border-radius: 4px;
+}
+.inpttcpf1 {
     width: 20%;
     margin-left: 20%;
     margin-top: 0.2%;
     padding-bottom: 0.5%;
     border-radius: 4px;
 }
-
 .inpTel{
     width: 50%;
     margin-left: 28%;
@@ -382,13 +388,22 @@
     margin-left: 40%;
     margin-top: -6%;
 }
+.sexr{
+    margin-left: 45%;
+    margin-top: -5%;
+}
 .in{
 margin-top: -3%;
 
 }
 .ind{
-    margin-left: 25%;
-    margin-top: -2%;
+    width:25%;
+    font-size: 18px;
+    margin-left: 24%;
+    margin-top: -2.5%;
+}
+.ind select{
+    border-radius:4px;
 }
 .iner{
    margin-left: 23%;
@@ -420,9 +435,21 @@ margin-top: -3%;
     margin-top: 4%;
     font-size: 20px;
 }
+.mest{
+    width:100%;
+    background-color: #c9ffc3;
+    margin-top: 3%;
+    padding-bottom: 1.5%;
+}
+.mest h1{
+    font-size: 16px;
+    color: #339c28;
+    margin-left: 3%;
+    padding-top: 1%;
+}
 .status{
     margin-left: 3%;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 .select{
     padding-bottom: 4px;
@@ -443,7 +470,6 @@ margin-top: -3%;
 }
 .butt{
     width:10%;
-    float: right;
     margin-right: 45%;
     margin-top: -15%;
 
@@ -452,6 +478,12 @@ margin-top: -3%;
     width:10%;
     float: right;
     margin-right: 45%;
+    margin-top: 25%;
+}
+.butting{
+    width:25%;
+    float: right;
+    margin-right: 40%;
     margin-top: 25%;
 }
 .butte{
@@ -594,18 +626,30 @@ ol li{
     color: red;
 }
 .labelNm{
-    margin-left: 22%;
+    float:left;
+    margin-left:1%;
+    margin-top: 2%;
+    margin-right: -16%;
     font-size: 20px;
     color: #a8a8a8;
 }
-
-.btu{
-    margin-left: 2%;
-    border-radius:4px;
-    margin-top: 1%;
+.labelNmCp{
+    float:left;
+    margin-left:1%;
+    margin-right: -16%;
+    margin-top: 15%;
+    font-size: 20px;
+    color: #a8a8a8;
 }
+.btu{
+    margin-left: 1%;
+    border-radius:4px;
+    margin-top: -14%;
+    margin-bottom: -6%;
+}
+
 .inpttNome{
-    width: 35%;
+    width: 70%;
     color: #a8a8a8;
     margin-left: 22%;
     margin-top: 3%;

@@ -9,7 +9,12 @@
 
 </head>
 <body>
-<h2 class="boasV">Olá seja bem vindo, ${name}</h2>
+
+    <g:if test="${flash.message}">
+        <div class="mest">
+            <h1><i class="fa fa-check" aria-hidden="true"></i> ${flash.message}</h1>
+        </div>
+    </g:if>
 
 <div class="apre">
     <header class="headPont">

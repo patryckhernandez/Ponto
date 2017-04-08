@@ -86,6 +86,7 @@ class FuncionarioController {
     def gerarRelatorio(){
 
         def func = Funcionario.findByNomeLike("%"+params.nome+"%")
+        def func2 = Funcionario.findByCpf(params.cpf)
         if(func != null){
             def query = "select f.nome, p.data, p.entrada, " +
                     "ps.saida from Ponto p,  Ponto_Saida ps, " +
@@ -99,10 +100,23 @@ class FuncionarioController {
             }*/
             render(view:'relatorioPonto', model: [listed:list])
 
+        }else if (func2 != null){
+            def query = "select f.nome, p.data, p.entrada, " +
+                    "ps.saida from Ponto p,  Ponto_Saida ps, " +
+                    " Funcionario f where ps.ponto_id = p.id and f.id = ${func2.id}"
+
+            def session = sessionFactory.getCurrentSession()
+            def list = session.createSQLQuery(query).list()
+
+            /* list.each {item ->
+                 print("Seu nome é: ${item[0]}, data de entrada: ${item[1]}, hora: ${item[2]}, saida: ${item[3]}")
+             }*/
+            render(view:'relatorioPonto', model: [listed:list])
         }else{
-            render(view:'relatorioPonto')
-            flash.message = "Desculpe, não encontramos nenhum funcionário com este nome!"
+             render(view:'relatorioPonto')
+           flash.message = "Desculpe, não encontramos nenhum funcionário com este nome!"
         }
+
     }
     @Transactional
     def delete(Funcionario funcionarioInstance) {

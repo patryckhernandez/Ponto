@@ -25,7 +25,7 @@
 
                 User us = springSecurityService.getCurrentUser()
                 def ref = us.funcionario
-                DateFormat date2 = new SimpleDateFormat("HH:mm:ss")
+                DateFormat date2 = new SimpleDateFormat("HH:mm")
                 def stringHora = Calendar.getInstance().getTime()
                 def hora = date2.format(stringHora)
 
@@ -52,7 +52,6 @@
                         ponto.funcionario = ref
                         ponto.save(flush: true, failOnError: true)
 
-
                     }
                 }else{
                     Ponto ponto = new Ponto()
@@ -60,9 +59,10 @@
                     ponto.data = data
                     ponto.funcionario = ref
                     ponto.save(flush: true, failOnError: true)
-                }
 
-                render (view: 'baterPonto', model: [data:data, name:name, hora: hora])
+                }
+                flash.message = "Ponto Registrado"
+                render (view: 'baterPonto', model: [data:dated, name:name, hora: hora])
 
             }
 

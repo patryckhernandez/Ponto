@@ -65,6 +65,7 @@ grails.project.dependency.resolution = {
         compile "org.grails.plugins:spring-security-core:2.0.0"
         compile "org.grails.plugins:modaldynamix:0.13"
         compile "org.grails.plugins:hibernate4:5.0.0.RC1"
+        compile "org.grails.plugins:calendar:1.2.1"
         // plugins needed at runtime but not for compilation
         runtime ":hibernate4:4.3.10" // or ":hibernate:3.6.10.18"
         runtime ":database-migration:1.4.0"

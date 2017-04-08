@@ -3,7 +3,7 @@
 	<head>
 		<meta name="layout" content="_start">
 		<g:set var="entityName" value="${message(code: 'funcionario.label', default: 'Funcionario')}" />
-		<title><g:message code="default.create.label" args="[entityName]" /></title>
+		<title><g:message code="default.create.label" args="[entityName]"/></title>
 	</head>
 	<body>
 	<h1 class="dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i> Novo Funcionário</h1>

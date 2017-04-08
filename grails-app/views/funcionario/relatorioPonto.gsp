@@ -14,14 +14,18 @@
 
             <div class="divBusca">
             <g:form url="[controller:'funcionario', action: 'gerarRelatorio']" method="POST">
-                <label class="labelNm">Busca por Nome</label>
+                <label class="labelNm">NOME</label>
                 <g:textField name="nome" class="inpttNome" placeholder="NOME" value="${relatorio?.nome}" />
-                <g:submitButton name="buscar" class=" btu btn-info" value="Buscar"/>
+                <label class="labelNmCp">CPF</label>
+                <g:textField name="cpf" class="inpttcpf" placeholder="CPF" value="${relatorio?.cpf}" />
+                <fieldset class="btu">
+                <g:submitButton name="buscar" class="butting btn btn-info" value="Buscar"/>
+                </fieldset>
             </g:form>
             </div>
             <g:if test="${flash.message}">
             <div class="tert">
-                <p class="warn"> *   ${flash.message}</p>
+                <p class="warn"> *  ${flash.message}</p>
             </div>
             </g:if>
         </div>

@@ -193,7 +193,7 @@
                             <g:link controller="funcionario" action="create"><i class="fa fa-plus"></i>  Novo Funcionário</g:link>
                         </li>
                         <li>
-                            <g:link controller="funcionario" action="relatorio"><i class="fa fa-list"></i> Relatório de pontos</g:link>
+                            <g:link controller="funcionario" action="relatorio"><i class="fa fa-list"></i> Listagem de pontos</g:link>
                         </li>
 
                     </ul>
@@ -207,7 +207,7 @@
                 </li>
                 </sec:ifAnyGranted>
                 <li>
-                    <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
+                    <a href="bootstrap-grid.html"><i class="fa fa-list-alt" aria-hidden="true"></i> Relatórios</a>
                 </li>
                 %{--<li>
                     <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i
@@ -222,10 +222,10 @@
                     </ul>
                 </li>--}%
                 <li>
-                    <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+                    <a href="blank-page.html"><i class="fa fa-eye" aria-hidden="true"></i> Estatísticas</a>
                 </li>
                 <li>
-                    <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+                    <a href="index-rtl.html"><i class="fa fa-list-alt" aria-hidden="true"></i> Funcionários em Falta</a>
                 </li>
             </ul>
         </div>

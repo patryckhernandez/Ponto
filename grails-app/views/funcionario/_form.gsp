@@ -22,7 +22,7 @@
 			<span class="required-indicator">*</span>
 		</label>
 		<div class="in">
-			<g:textField class="inpttcpf" name="cpf" required="" value="${funcionarioInstance?.cpf}"/>
+			<g:textField class="inpttcpf1" name="cpf" required="" value="${funcionarioInstance?.cpf}"/>
 		</div>
 	</div>
 	<div class="telefone" ${hasErrors(bean: funcionarioInstance, field: 'telefone', 'error')} required">
@@ -41,12 +41,11 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<div class="ind">
-
 		<g:datePicker class="date" name="idade" precision="day" value="${funcionarioInstance?.idade}"/>
     </div>
 </div>
 
-<div class="telefone" ${hasErrors(bean: funcionarioInstance, field: 'sexo', 'error')} required">
+<div class="sexr" ${hasErrors(bean: funcionarioInstance, field: 'sexo', 'error')} required">
 	<label for="sexo" class="labelsTel">
 		<g:message code="funcionario.sexo.label" default="SEXO" />
 		<span class="required-indicator">*</span>
@@ -64,7 +63,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<div class="in">
-		<g:textField class="inpttcpf" name="pis" required="" value="${funcionarioInstance?.pis}"/>
+		<g:textField class="inpttcpf1" name="pis" required="" value="${funcionarioInstance?.pis}"/>
 	</div>
 </div>
 
