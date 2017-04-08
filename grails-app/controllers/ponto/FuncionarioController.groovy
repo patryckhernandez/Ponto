@@ -1,12 +1,12 @@
 package ponto
-import javax.transaction.Transaction
 
+import javax.transaction.Transaction
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 import org.hibernate.SessionFactory
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.hibernate.Query
+import org.hibernate.Session
+import org.hibernate.Transaction
 
 @Transactional(readOnly = true)
 class FuncionarioController {
@@ -87,13 +87,16 @@ class FuncionarioController {
 
         def func = Funcionario.findByNomeLike("%"+params.nome+"%")
         if(func != null){
-            def query = 'select f.nome, p.data, p.entrada, ' +
-                    'ps.saida from Ponto p,  PontoSaida ps,  Funcionario f where f.id = :id'
+            def query = "select f.nome, p.data, p.entrada, " +
+                    "ps.saida from Ponto p,  Ponto_Saida ps, " +
+                    " Funcionario f where ps.ponto_id = p.id and f.id = ${func.id}"
 
-            def list = sessionFactory.getCurrentSession().createSQLQuery(query, [id:func.id])
-            list.each {item ->
+            def session = sessionFactory.getCurrentSession()
+            def list = session.createSQLQuery(query).list()
+
+           /* list.each {item ->
                 print("Seu nome é: ${item[0]}, data de entrada: ${item[1]}, hora: ${item[2]}, saida: ${item[3]}")
-            }
+            }*/
             render(view:'relatorioPonto', model: [listed:list])
 
         }else{

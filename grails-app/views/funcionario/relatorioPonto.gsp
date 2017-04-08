@@ -33,10 +33,10 @@
      <table class="table table-bordered">
          <thead>
          <tr class="coli">
-            <td>NOME</td>
-            <td>DATA</td>
-            <td>ENTRADA</td>
-            <td>SAÍDA</td>
+            <td><a href="#">NOME</a></td>
+            <td><a href="#">DATA</a></td>
+            <td><a href="#">ENTRADA</a></td>
+            <td><a href="#">SAÍDA</a></td>
         </tr>
          </thead>
 
