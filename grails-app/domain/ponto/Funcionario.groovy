@@ -8,7 +8,8 @@ class Funcionario {
     Date idade
     String sexo
     String pis
-
+    String moradia
+    
     static constraints = {
    empresa(nullable: true)
    user(nullable: true)
