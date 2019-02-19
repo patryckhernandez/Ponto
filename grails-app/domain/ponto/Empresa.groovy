@@ -6,7 +6,8 @@ class Empresa {
     String telefone
     String endereco
     Integer quantidadeFuncionario
-
+    Integer num
+    
     static constraints = {
     user(nullable: true)
     nome()
